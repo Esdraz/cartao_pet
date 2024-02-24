@@ -47,6 +47,8 @@ void menu(int? opcao) {
         break;
       case 4:
         print('Finalizando o programa, até a próxima... ');
+        sleep(Duration(seconds: 2));
+        stdout.write('\x1B[2J\x1B[0;0H');
         break;
       default:
         print('Opção inválida!');
