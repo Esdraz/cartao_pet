@@ -1,8 +1,8 @@
 class Pet {
-  final String nome;
-  final String sexo;
-  final int idade;
-  final String tipo;
+  String nome;
+  String sexo;
+  int idade;
+  String tipo;
 
   Pet({
     required this.nome,
@@ -10,4 +10,9 @@ class Pet {
     required this.idade,
     required this.tipo,
   });
+
+  @override
+  String toString() {
+    return 'Pet{nome=$nome, sexo=$sexo, idade=$idade, tipo=$tipo}';
+  }
 }

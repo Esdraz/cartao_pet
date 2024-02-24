@@ -1,26 +1,22 @@
 import 'dart:io';
 
+import 'package:cartao_pet/pet.dart';
+
 void main() {
-  while (true) {
-    print('Digite a opção desejada:');
-    print('1 - Opção 1');
-    print('2 - Opção 2');
-    print('0 - Sair');
+  List<Pet> listaPets = <Pet>[];
+  print(listaPets.length);
 
-    var opcao = int.parse(stdin.readLineSync()!);
+  print('Digite o nome do seu pet: ');
+  String nome = stdin.readLineSync()!;
+  print('Digite o sexo do seu pet: ');
+  String sexo = stdin.readLineSync()!;
 
-    switch (opcao) {
-      case 1:
-        print('Opção 1 selecionada');
-        break;
-      case 2:
-        print('Opção 2 selecionada');
-        break;
-      case 0:
-        print('Saindo do programa...');
-        return;
-      default:
-        print('Opção inválida');
-    }
-  }
+  print('Digite a idade do seu pet: ');
+  int idade = int.parse(stdin.readLineSync()!);
+
+  print('Digite o tipo do seu pet: ');
+  var tipo = stdin.readLineSync()!;
+
+  listaPets.add(Pet(nome: nome, sexo: sexo, idade: idade, tipo: tipo));
+  print(listaPets.toString());
 }
