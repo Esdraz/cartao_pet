@@ -2,10 +2,10 @@ import 'package:cartao_pet/endereco.dart';
 import 'package:cartao_pet/pet.dart';
 
 class Responsavel {
-  final String cpf;
-  final String nome;
-  final Endereco endereco;
-  final Pet pet;
+  String cpf;
+  String nome;
+  Endereco endereco;
+  Pet pet;
 
   Responsavel({
     required this.cpf,

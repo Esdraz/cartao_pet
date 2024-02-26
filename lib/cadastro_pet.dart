@@ -10,14 +10,16 @@ class CadastroPet {
     String nome = stdin.readLineSync()!;
     print('Digite o sexo do seu pet: ');
     String sexo = stdin.readLineSync()!;
-
     print('Digite a idade do seu pet: ');
     int idade = int.parse(stdin.readLineSync()!);
+    print('Digite o peso do seu pet: ');
+    double peso = double.parse(stdin.readLineSync()!);
 
     print('Digite o tipo do seu pet: ');
     var tipo = stdin.readLineSync()!;
 
-    _listaPets.add(Pet(nome: nome, sexo: sexo, idade: idade, tipo: tipo));
+    _listaPets
+        .add(Pet(nome: nome, sexo: sexo, idade: idade, tipo: tipo, peso: peso));
   }
 
   void listarPets() {

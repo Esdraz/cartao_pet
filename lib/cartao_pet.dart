@@ -39,6 +39,7 @@ void menu(int? opcao) {
         } else {
           print('Finalizando o programa, até a próxima... ');
           opcao = 4;
+          stdout.write('\x1B[2J\x1B[0;0H');
         }
 
       case 3:
